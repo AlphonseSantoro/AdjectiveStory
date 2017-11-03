@@ -151,7 +151,7 @@ public class StoryCreator {
         System.out.println("Enter minimum " + countAdjectives + " adjectives.");
         while(!userInput.equals("exit")){
             userInput = scanner.next().toLowerCase();
-            if(!userInput.equals("exit")){
+            if(!userInput.equalsIgnoreCase("exit")){
                 adjectiveList.add(userInput);
                 count--;
                 if(count > 0){
@@ -161,7 +161,7 @@ public class StoryCreator {
                     System.out.println("You have enough adjectives to create the story, enter more adjectives if you want more variety.");
                 }
             }
-            if(userInput.equals("exit") && adjectiveList.size() < countAdjectives){
+            if(userInput.equalsIgnoreCase("exit") && adjectiveList.size() < countAdjectives){
                 System.out.println("The history cannot be made because there is not enough adjectives!");
                 validateNumberOfAdjectives();
                 notEnoughAdjectives();
